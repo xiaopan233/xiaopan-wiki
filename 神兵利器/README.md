@@ -1,0 +1,40 @@
+# 神兵利器
+
+## 信息收集神器： ##
+
+[OneForAll](https://github.com/shmilylty/OneForAll) 
+
+强大信息收集神器
+
+---
+
+[waybackurls](https://github.com/tomnomnom/waybackurls/) 
+
+利用wayback machine，收集链接和端点
+
+---
+
+[restore-source-tree](https://github.com/alexkuz/restore-source-tree) 
+
+Source Map 还原工具
+
+---
+
+[js beautifier](https://github.com/beautify-web/js-beautify) 
+
+js美化
+
+---
+
+[LinkFinder](https://github.com/GerbenJavado/LinkFinder) 
+
+端点寻找
+
+
+<br>
+<br>
+## Burp ##
+
+###  burp fake ip ###
+
+[https://github.com/TheKingOfDuck/burpFakeIP](https://github.com/TheKingOfDuck/burpFakeIP) 
