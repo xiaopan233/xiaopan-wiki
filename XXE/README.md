@@ -105,7 +105,7 @@ php解析XML的简单代码：
 
 将拼接内容改成“CDATA”试试：
 
-![](/home/xiaopan/xiaopan-wiki/doc-wiki/XXE/xxe/10.png)
+![](./xxe/10.png)
 
 
 
