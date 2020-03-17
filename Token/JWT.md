@@ -142,7 +142,41 @@ JWT默认密钥是 None，或者支持空密钥，可能是测试需要什么的
 
 
 
+### （5）Key Id 注入
+
+JWT中使用 H开头的加密（对称加密），为确保安全会在header中增加一个字段 key id，key id 也类似于一个凭据用来验证JWT是否合法。假若使用key id验证时没有过滤输入，可能造成注入，如SQL注入
 
 
-Referer：
+
+### （6）CVE-2018-00114
+
+存在于 Cisco node-jose开源库中的漏洞，让攻击者能够用嵌入在token中的密钥对token重签名。
+
+
+
+攻击流程：
+
+先拿到一个JWT token，然后解码，创建一个RSA key，在JWT解码后的 header中新增两个字段：n 和 e。 n 是public key， e 是 密钥（应该是这样）。类似这样：
+
+```
+{	"alg":"RS256",
+	"jwk":{
+		"kty":"RSA",
+		"kid":"topo.gigio@hackerzzzz.own",
+		"use":"sig",
+		"n":"oVSM2Sb1v1s6_PnF6sw92GveOkoWIYlwIhyaLwFPmtTuHuIcN6lTX3EAtR4CbAxoi6ylK_tr5PMlml6eiHmzXQ",
+		"e":"AQAB"
+	}
+}
+```
+
+exp：
+
+https://www.exploit-db.com/exploits/44324
+
+然后用public key 和 e 重签名signature。这样发过去，存在漏洞的话，就会使用我们放在 header 的 n 和 e 来验证 signature。
+
+
+
+ Referer：
 [https://www.youtube.com/watch?v=zWVRHK3ykfo&list=PLhaoFbw_ejdo-4nSeRKNH1pRhdfsn3CI7&index=40&t=0s](https://www.youtube.com/watch?v=zWVRHK3ykfo&list=PLhaoFbw_ejdo-4nSeRKNH1pRhdfsn3CI7&index=40&t=0s) 
