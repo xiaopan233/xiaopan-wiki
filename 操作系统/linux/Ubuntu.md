@@ -2,7 +2,7 @@
 
 2020-03-06
 
-记录一下，最近突然兴趣大法，想用ubuntu做主系统，变装了个双系统。目前为止感觉还不错。。。
+记录一下，最近突然兴趣大发，想用ubuntu做主系统，变装了个双系统。目前为止感觉还不错。。。
 
 配置ubuntu的一些参考：
 
@@ -635,11 +635,67 @@ https://www.telerik.com/fiddler
 
 
 
+#### （20）vmware
+
+virutalbox。。太卡了，一怒之下，换个vmware（之前用virutalbox打不开悬剑，vmware才能，嘻嘻，悬剑真香）把
+
+先去  https://www.vmware.com/go/getWorkstation-linux 把包下下来，然后改名为 vmware.bin
+
+然后安装依赖：
+
+```
+sudo apt install build-essential
+```
+
+然后
+
+```
+sudo bash ./vmware.bin
+```
+
+然后去应用程序那里就能见到啦
 
 
-查看文件大小（用kB显示）：
+
+#### （21）Luyten
+
+一个反编译java的工具，据说比jd-gui猛
+
+https://github.com/deathmarine/Luyten
+
+（releases哪里有直接下的jar包，不知道要不要按照README的步骤装依赖，反正我装了。。。）
+
+
+
+#### （22）Barrier
+
+Linux 与 Windows 共享鼠标键盘软件。
+
+Windows下启用 Auto config需要安装一个插件，需要FQ才能安装。
+
+https://github.com/debauchee/barrier
+
+
+
+
+
+## 查看文件大小（用kB显示）：
 
 	ls -l --block-size=k
+
+<br>
+
+
+
+## root使用chrome浏览器报错
+
+```
+vim /usr/bin/google-chrome
+将 exec -a "$0" "$HERE/chrome" "$@"  改为
+exec -a "$0" "$HERE/chrome" "$@" --user-data-dir --no-sandbox
+```
+
+
 
 <br>
 

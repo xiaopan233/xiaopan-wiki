@@ -8,7 +8,75 @@
 
 
 
-#### 2020-3-17
+### 2020-3-22
+
+编程语言：
+
+&nbsp;&nbsp;&nbsp;&nbsp;Python nmap不能正常使用
+
+&nbsp;&nbsp;&nbsp;&nbsp;解决 requests 返回中文乱码的问题
+
+解决 chrome不能在root下使用的问题
+
+初步完成了子域名整理脚本的编写，还差加入 多线程和一些优化吧，毕竟就扫两个子域名就要十几秒。。有点小慢。
+
+界面：
+
+![](./readme/1.png)
+
+
+
+### 2020-3-21
+
+今天么得学习，凌晨到早上在下东西，中午简单写了下脚本，打算做个子域自动收集的Python脚本，Oneforall收集到的子域差不多了，就是差将其归类汇总截图什么的。下午有事出去了。晚上在装电脑，还得写学校的文档。。。么得时间。。
+
+操作系统：
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ubuntu 发现一款牛逼的软件，Linux和Windows之间共享鼠标键盘，名字叫 Barrier，好像是收费版  synergy 派生出来的一个开源的，挺好用的。
+
+
+
+### 2020-3-20
+
+HTTP请求走私
+
+编程语言：
+
+&nbsp;&nbsp;&nbsp;&nbsp;Java jar包
+
+操作系统：
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ubuntu 一个好用的Java反编译编辑器：Luyten
+
+服务配置：
+
+&nbsp;&nbsp;&nbsp;&nbsp; Apache 创建服务
+
+
+
+### 2020-3-19
+
+Token：
+
+&nbsp;&nbsp;&nbsp;&nbsp;JWT
+
+Pentest：
+
+&nbsp;&nbsp;&nbsp;&nbsp;一些想法
+
+
+
+### 2020-3-18
+
+今天摸了很久的鱼。。没有学习。。呜呜呜呜，只能装个东西凑个数了。19号一定认真学习！
+
+操作系统：
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ubuntu装VMware
+
+
+
+### 2020-3-17
 
 Token：
 

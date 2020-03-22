@@ -178,5 +178,29 @@ https://www.exploit-db.com/exploits/44324
 
 
 
+### （7）jku
+
+普通的jku流程：
+
+![](./JWT/2.png)
+
+它是根据jku的值去找公钥资源服务器的。如果篡改jku，指向恶意服务器，即可任意伪造jwt。
+
+不过一般都对jku有检测，比如限制了域名什么的，这时候就需要绕过：
+
+```
+1、trust.example.com		=>		trustexample.com
+2、https://trust		=> 	https://trust@test.com
+3、https://trust/jwk 	=> 	https://trust/jwk/../file_upload		   #文件上传
+4、https://trust/jwk		=>	https://trust/jwk/../open_redirect		#重定向	*
+5、https://trust/jwk		=>	https://trust/jwk/../header_injection	#http 头注入
+```
+
+
+
+
+
+
+
  Referer：
 [https://www.youtube.com/watch?v=zWVRHK3ykfo&list=PLhaoFbw_ejdo-4nSeRKNH1pRhdfsn3CI7&index=40&t=0s](https://www.youtube.com/watch?v=zWVRHK3ykfo&list=PLhaoFbw_ejdo-4nSeRKNH1pRhdfsn3CI7&index=40&t=0s) 

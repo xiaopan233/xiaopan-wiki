@@ -42,7 +42,7 @@ ServerName 改成域名，如果本地的话就localhost，如果是用ip的就�
 在这个模块下加入几行配置：
 
     AddType application/x-httpd-php .php
-	AddHandler application/x-httpd-php .php
+    AddHandler application/x-httpd-php .php
     PHPIniDir "D:/web/php-5-6-5"
 
 添加对.php的解析，Type和Handler都要加，然后再加多一行PHPIniDir指定php.ini的所在目录。
@@ -60,6 +60,15 @@ ServerName 改成域名，如果本地的话就localhost，如果是用ip的就�
 最后写个phpinfo验证：
 
 ![](./Apache/12.png)
+
+
+
+### 创建服务
+
+```
+httpd.exe -k install -n apache2.0
+```
+
 
 
 ### 目录配置 ###
@@ -105,7 +114,7 @@ granted表示允许访问；若设置成denied表示不允许访问
 ## 错误日志： ##
 
 	ErrorLog "日志路径"
-	
+
 ## 日志记录 ##
 
 LogFormat    定义日志记录的格式
@@ -157,7 +166,7 @@ CustomLog格式：
 	ServerTokens OS
 	
 	ServerTokens Full
-	
+
 
 
 
