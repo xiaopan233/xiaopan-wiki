@@ -391,6 +391,12 @@ sudo dpkg -i xxxxx.deb
 
 即可
 
+但是还是有些字体没有，如微软雅黑什么的，如果别人丢个微软雅黑的过来就乱码了。
+
+终极做法：
+
+复制windows 下  C:\Windows\Fonts 的字体到 ubuntu 的 /usr/share/fonts/目录下。再执行一遍上面的命令即可。
+
 
 
 #### （10）火焰截图
@@ -677,11 +683,37 @@ https://github.com/debauchee/barrier
 
 
 
+#### （23）安装图形化界面
+
+如果一开始是命令行的，就要安装图形化界面。
+
+```
+sudo apt-get install tasksel -y
+```
+
+安装完成后，执行命令：
+
+```
+sudo tasksel
+```
+
+出现图形选项，用上下箭头选择 “Ubuntu desktop”，按空格选中，然后按tab移动到Ok，按下回车，开始安装。
+
 
 
 ## 查看文件大小（用kB显示）：
 
 	ls -l --block-size=k
+
+<br>
+
+
+
+## 挂在windows共享文件
+
+```
+sudo mount -t cifs -o username=xiaopan,password=123456 //192.168.1.101/share /share/
+```
 
 <br>
 
@@ -694,6 +726,28 @@ vim /usr/bin/google-chrome
 将 exec -a "$0" "$HERE/chrome" "$@"  改为
 exec -a "$0" "$HERE/chrome" "$@" --user-data-dir --no-sandbox
 ```
+
+
+
+<br>
+
+## 英文版添加中文语言
+
+如果是英文版，中文会乱码，需要添加中文语言。
+
+首先可以先换成本页最底部的源，国内源较快。
+
+进入设置 -> Region & Language。点击 “Manage Installed Languages”。
+
+这时会有一个弹出窗口，点击【Install】，下载语言包
+
+下载好后。点击 “Language”标签页中的 Install / Remove Languages，安装“汉语” 或者是叫 “Chinese”。
+
+安装好后，将“汉语（中国）”鼠标拖到最顶部。
+
+再到 “Regional Formats”，将其改为“汉语（中国）”
+
+重启系统即可（出现修改文件夹的选择保留旧名称。这样文件夹就不会变成中文的了）
 
 
 
@@ -776,3 +830,24 @@ apt-get update
 
 
 ​	
+
+## 国内源：
+
+```
+18.04LTS sources.list内容
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+```
+

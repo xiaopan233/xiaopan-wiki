@@ -2,9 +2,103 @@
 
 这个简单的wiki作为本人学习的总结，并且方便以后回顾。每天都会更新，学了啥更啥。（不用的话服务器就吃灰了= =）
 
-框架用的gitbook，个人wiki地址：https://xiaopan233.club/
+框架用的gitbook，个人wiki地址：http://xiaopan233.club/
+
+一些字符的实体化编码：
+
+```
+* &#42;
+  &nbsp;
+() &#40;&#41;
+[] &#91;&#93;
+<> &#60;&#62;
+```
+
+
 
 ## 更新日志 ##
+
+
+
+### 2020-4-01
+
+SQL注入
+
+&nbsp;&nbsp;&nbsp;&nbsp;Mysql报错注入
+
+&nbsp;&nbsp;&nbsp;&nbsp;Sql Server注入
+
+&nbsp;&nbsp;&nbsp;&nbsp;Access注入
+
+
+
+### 2020-3-31
+
+SQL注入
+
+
+
+### 2020-3-30
+
+这几天先学着HTTP smuggling先，学好统一写出来。
+
+一个http smuggling的靶场：
+
+https://github.com/ZeddYu/HTTP-Smuggling-Lab
+
+服务配置：
+
+&nbsp;&nbsp;&nbsp;&nbsp;docker-compose安装
+
+
+
+### 2020-3-29
+
+服务配置：
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nginx安装以及反向代理配置
+
+
+
+### 2020-3-28
+
+HTTP请求走私
+
+&nbsp;&nbsp;&nbsp;&nbsp;Transfer-Encoding 作为一个POST请求如何发送
+
+
+
+### 2020-3-26 - 27
+
+写学校的文档，没有学习技术
+
+
+
+### 2020-3-25
+
+完成子域名整理脚本。gayhub地址：
+
+https://github.com/xiaopan233/panSubdomainScanner
+
+
+
+### 2020-3-24
+
+调整子域名整理脚本。
+
+发现将请求和截图分开好点，截图线程开大容易卡死，不如先让大线程去跑好请求的东西，获取少量的存货主机再去用小线程跑截图。
+
+弄文档。。。。么的学习
+
+
+
+### 2020-3-23
+
+操作系统：
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ubuntu 下WPS字体的终极解决方法
+
+调试子域名整理脚本
 
 
 
@@ -19,6 +113,10 @@
 解决 chrome不能在root下使用的问题
 
 初步完成了子域名整理脚本的编写，还差加入 多线程和一些优化吧，毕竟就扫两个子域名就要十几秒。。有点小慢。
+
+gayhub地址：
+
+https://github.com/xiaopan233/panSubdomainScanner
 
 界面：
 

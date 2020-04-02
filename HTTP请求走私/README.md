@@ -48,6 +48,27 @@ ABCDE\r\n
 
 
 
+如果作为一个POST请求：
+
+```
+POST /sqli/Less-13/ HTTP/1.1
+Host: 192.168.206.128
+Transfer-Encoding: chunked
+
+5\r\n
+uname\r\n
+6\r\n
+=admin\r\n
+3\r\n
+&id\r\n
+2\r\n
+=1\r\n
+0\r\n
+\r\n
+```
+
+
+
 ## RFC规范：
 
 如果 Transfer-Encoding 和 Content-Length 一起出现，后者要被忽略掉（应该是说忽略掉 Content-Length）

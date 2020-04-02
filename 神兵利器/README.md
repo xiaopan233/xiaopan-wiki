@@ -6,6 +6,14 @@
 
 强大信息收集神器
 
+
+
+（打个广告，嘻嘻）
+
+[panSubdomainScanner](https://github.com/xiaopan233/panSubdomainScanner)
+
+配合OneForAll食用最佳
+
 ---
 
 [waybackurls](https://github.com/tomnomnom/waybackurls/) 
@@ -35,6 +43,14 @@ js美化
 <br>
 ## Burp ##
 
-###  burp fake ip ###
+[burp fake ip](https://github.com/TheKingOfDuck/burpFakeIP) 
 
-[https://github.com/TheKingOfDuck/burpFakeIP](https://github.com/TheKingOfDuck/burpFakeIP) 
+---
+
+<br>
+
+k8gege 工具集：
+
+https://github.com/k8gege/K8tools
+
+解压*密码*: *k8gege* 旧*密码*k8team 或K8team
